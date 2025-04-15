@@ -1,0 +1,98 @@
+/* frontend/src/pages/AdminDashboard.css */
+.admin-dashboard {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-dashboard h2,
+  .admin-dashboard h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+   .admin-dashboard h3 {
+      margin-top: 2rem;
+      border-top: 1px solid #eee;
+      padding-top: 1.5rem;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .add-question-btn,
+  .submit-quiz-btn {
+    display: block; /* Make buttons take full width or center them */
+    width: fit-content; /* Adjust width based on content */
+    margin: 1.5rem auto 0; /* Center button with top margin */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-question-btn {
+     background-color: #2196F3; /* Blue */
+     color: white;
+     margin-top: 1rem; /* Less margin than submit */
+  }
+  .add-question-btn:hover {
+      background-color: #1976D2;
+  }
+  
+  .submit-quiz-btn {
+     background-color: #4CAF50; /* Green */
+     color: white;
+     margin-top: 2rem; /* More separation */
+  }
+  
+  .submit-quiz-btn:hover:not(:disabled) {
+      background-color: #45a049;
+  }
+  
+   .submit-quiz-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+  }
+  
+  
+  /* Message Styles */
+  .message {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      text-align: center;
+  }
+  .error-message {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+  }
+  .success-message {
+       background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+  }

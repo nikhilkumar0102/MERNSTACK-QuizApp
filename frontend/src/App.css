@@ -1,0 +1,26 @@
+/* frontend/src/index.css or App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6; /* Light grey background */
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  padding: 1rem 2rem; /* Add some padding around the main content */
+}
+
+/* Basic button styling (can be overridden by specific component styles) */
+button {
+  cursor: pointer;
+  font-family: inherit; /* Use the body's font */
+}

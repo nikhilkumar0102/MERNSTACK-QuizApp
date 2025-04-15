@@ -1,0 +1,90 @@
+.question-form h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.remove-question-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+ .remove-question-btn:hover {
+     background-color: #d32f2f;
+ }
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for padding and width */
+}
+
+.option-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.option-input input {
+    flex-grow: 1; /* Take available space */
+    margin-right: 5px;
+}
+
+.remove-option-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 4px 7px;
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+    font-size: 0.8em;
+    line-height: 1; /* Adjust line height */
+    margin-left: 5px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.remove-option-btn:hover {
+     background-color: #fb8c00;
+ }
+
+.add-option-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+.add-option-btn:hover {
+     background-color: #45a049;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 4px;
+}

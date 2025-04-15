@@ -1,0 +1,16 @@
+{
+    "name": "quiz-backend",
+    "version": "1.0.0",
+    "description": "Backend server for Quiz App",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Nikhil Kumar",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {}
+  }
+  
