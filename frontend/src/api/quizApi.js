@@ -29,6 +29,16 @@ export const getAllQuizzes = async (domain = '') => {
     throw error.response?.data || new Error('API error fetching quizzes');
   }
 };
+// Function to delete a quiz by its ID
+export const deleteQuiz = async (quizId) => {
+  try {
+    const response = await quizApi.delete(`/quizzes/${quizId}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error deleting quiz ${quizId}:`, error.response?.data || error.message);
+    throw error.response?.data || new Error(`API error deleting quiz ${quizId}`);
+  }
+};
 
 // Function to get a single quiz by its ID
 export const getQuizById = async (quizId) => {
