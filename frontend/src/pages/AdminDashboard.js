@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 import QuestionForm from '../components/QuestionForm';
 import { createQuiz } from '../api/quizApi';
-import { useNavigate } from 'react-router-dom';
 import './AdminDashboard.css'; // Create CSS for styling
-
 
 function AdminDashboard() {
   const [title, setTitle] = useState('');
   const [domain, setDomain] = useState('');
   const [questions, setQuestions] = useState([
-    { questionText: '', options: ['', ''], correctAnswer: '' }, // Start with one blank question
+    { questionText: '', options: ['', ''], correctAnswer: '' },
   ]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate();
 
   const handleQuestionChange = (index, updatedQuestion) => {
     const newQuestions = [...questions];
@@ -31,8 +28,8 @@ function AdminDashboard() {
 
   const removeQuestion = (index) => {
     if (questions.length <= 1) {
-        alert("A quiz must have at least one question.");
-        return; // Prevent removing the last question
+      alert("A quiz must have at least one question.");
+      return;
     }
     const newQuestions = questions.filter((_, i) => i !== index);
     setQuestions(newQuestions);
@@ -44,16 +41,16 @@ function AdminDashboard() {
     if (questions.length === 0) return "Quiz must have at least one question.";
 
     for (let i = 0; i < questions.length; i++) {
-        const q = questions[i];
-         if (!q.questionText?.trim()) return `Question ${i + 1}: Text is required.`;
-         if (!q.options || q.options.length < 2) return `Question ${i + 1}: Must have at least two options.`;
-         if (q.options.some(opt => !opt?.trim())) return `Question ${i + 1}: All options must have text.`;
-         if (!q.correctAnswer?.trim()) return `Question ${i + 1}: Correct answer must be selected.`;
-         if (!q.options.includes(q.correctAnswer)) return `Question ${i + 1}: The selected correct answer is not among the options.`;
+      const q = questions[i];
+      if (!q.questionText?.trim()) return `Question ${i + 1}: Text is required.`;
+      if (!q.options || q.options.length < 2) return `Question ${i + 1}: Must have at least two options.`;
+      if (q.options.some(opt => !opt?.trim())) return `Question ${i + 1}: All options must have text.`;
+      if (!q.correctAnswer?.trim()) return `Question ${i + 1}: Correct answer must be selected.`;
+      if (!q.options.includes(q.correctAnswer)) return `Question ${i + 1}: Correct answer must match one of the options.`;
     }
-    return null; // No errors
-  }
 
+    return null; // No validation errors
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,11 +58,10 @@ function AdminDashboard() {
     setSuccess('');
 
     const validationError = validateQuiz();
-     if (validationError) {
-         setError(validationError);
-         return;
-     }
-
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
 
     setLoading(true);
 
@@ -78,11 +74,9 @@ function AdminDashboard() {
     try {
       await createQuiz(quizData);
       setSuccess('Quiz created successfully!');
-      // Optionally clear form or redirect
       setTitle('');
       setDomain('');
       setQuestions([{ questionText: '', options: ['', ''], correctAnswer: '' }]);
-      // navigate('/quizzes'); // Or redirect to quiz list page
     } catch (err) {
       setError(err.message || 'Failed to create quiz. Check console for details.');
     } finally {
@@ -107,6 +101,7 @@ function AdminDashboard() {
             required
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="domain">Domain/Category:</label>
           <input
@@ -122,7 +117,7 @@ function AdminDashboard() {
         <h3>Questions</h3>
         {questions.map((q, index) => (
           <QuestionForm
-            key={index} // It's okay for dev, but consider stable IDs if list reordering happens
+            key={index}
             index={index}
             questionData={q}
             onQuestionChange={handleQuestionChange}
