@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MERNSTACK-QuizApp/static/css/main.0eaf6ea0.css",
+    "main.js": "/MERNSTACK-QuizApp/static/js/main.07e63171.js",
+    "static/js/453.8ab44547.chunk.js": "/MERNSTACK-QuizApp/static/js/453.8ab44547.chunk.js",
+    "index.html": "/MERNSTACK-QuizApp/index.html",
+    "main.0eaf6ea0.css.map": "/MERNSTACK-QuizApp/static/css/main.0eaf6ea0.css.map",
+    "main.07e63171.js.map": "/MERNSTACK-QuizApp/static/js/main.07e63171.js.map",
+    "453.8ab44547.chunk.js.map": "/MERNSTACK-QuizApp/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0eaf6ea0.css",
+    "static/js/main.07e63171.js"
+  ]
+}
