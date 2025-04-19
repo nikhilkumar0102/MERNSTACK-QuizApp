@@ -1,7 +1,7 @@
 // frontend/src/api/quizApi.js
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api'; // Fallback
+const API_URL = process.env.REACT_APP_API_URL || 'https://mernstack-quiz-app.vercel.app//api'; // Fallback
 
 const quizApi = axios.create({
   baseURL: API_URL,
